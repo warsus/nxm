@@ -5,8 +5,8 @@ var $solution = document.getElementById("solution");
 var $mtable = document.getElementById("multiplication-table");
 
 function generateQuestion(){
-    var num1 = Math.floor(Math.random() * 10);
-    var num2 = Math.floor(Math.random() * 10);
+    var num1 = Math.floor(Math.random() * 8) + 2;
+    var num2 = Math.floor(Math.random() * 8) + 2;
     var operator = ["*"];
     var randomOperator = operator[Math.floor(Math.random() * operator.length)];
     question = [num1, randomOperator, num2];
