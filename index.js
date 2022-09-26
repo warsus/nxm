@@ -2,6 +2,7 @@ var $question = document.getElementById("question")
 
 var question = [2, "*", 4];
 var $solution = document.getElementById("solution");
+var $mtable = document.getElementById("multiplication-table");
 
 function generateQuestion(){
     var num1 = Math.floor(Math.random() * 10);
@@ -25,6 +26,21 @@ function render(question){
 
 render(question);
 
+function renderMatrix(hideAnswers){
+    var $trs = $mtable.getElementsByTagName("tr");
+    for(var i = 0; i < $trs.length; i++){
+        var $tds = $trs[i].getElementsByTagName("td");
+        for(var j = 0; j < $tds.length; j++){
+            if(hideAnswers && (i == 0 || j == 0)){
+                $tds[j].innerHTML = (i+1)*(j+1);
+            } else {
+                $tds[j].innerHTML = "";
+            }
+        }
+    }
+}
+
+renderMatrix(true);
 
 $solution.onchange = function(event) {
     let guess = parseInt(event.target.value)
