@@ -1,0 +1,20 @@
+#question {
+  /* background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px; */
+}
+
+/* The animation code */
+@keyframes example {
+    from {background-color: #0c0;}
+    to {background-color: white;}
+  }
+
+.correct {
+  background-color: white;
+  border: 1px solid #0c0;   
+  animation-name: example;
+  animation-duration: 2s;
+}
